@@ -21,7 +21,7 @@ namespace CreateClass
 
         public override string ToString()
         {
-            return $"My name is {Name} and I was born in {BirthDate.Year}.";
+            return $"Name: {Name}, Birthday: {BirthDate.ToLongDateString()}.";
         }
     }
 }
