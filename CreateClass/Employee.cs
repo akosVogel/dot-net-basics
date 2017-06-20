@@ -30,7 +30,7 @@ namespace CreateClass
             return newEmployee;
         }
 
-        #region MemberwiseClone
+        #region SimpleMemberwiseClone
         //public object Clone()
         //{
         //    return MemberwiseClone();
