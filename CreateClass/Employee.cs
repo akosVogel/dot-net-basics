@@ -25,7 +25,18 @@ namespace CreateClass
 
         public object Clone()
         {
-            return MemberwiseClone();
+            Employee newEmployee = (Employee)MemberwiseClone();
+            newEmployee.Room = new Room(Room.Number);
+            return newEmployee;
         }
+
+        #region MemberwiseClone
+        //public object Clone()
+        //{
+        //    return MemberwiseClone();
+        //} 
+        #endregion
+
+
     }
 }
