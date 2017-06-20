@@ -36,7 +36,5 @@ namespace CreateClass
         //    return MemberwiseClone();
         //} 
         #endregion
-
-
     }
 }
