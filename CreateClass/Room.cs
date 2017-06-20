@@ -2,11 +2,11 @@
 {
     public class Room
     {
-        private int roomNumber;
+        public int Number { get; set; }
 
         public Room(int roomNumber)
         {
-            this.roomNumber = roomNumber;
+            Number = roomNumber;
         }
     }
 }

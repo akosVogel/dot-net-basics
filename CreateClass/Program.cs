@@ -6,13 +6,15 @@ namespace CreateClass
     {
         static void Main(string[] args)
         {
-            var atesz = new Person("Atesz", new DateTime(1989,5,6));
-            Console.WriteLine(atesz);
+            Console.WriteLine("-----------------");
 
-            var ateszTheProgrammer = new Employee("ngAtesz", new DateTime(1989, 5, 6));
-            ateszTheProgrammer.Salary = 100000;
-            ateszTheProgrammer.Profession = "Software engineer";
-            Console.WriteLine(ateszTheProgrammer);
+            Employee Kovacs = new Employee("Géza", DateTime.Now, 1000, "léhűtő");
+            Kovacs.Room = new Room(111);
+            Employee Kovacs2 = (Employee)Kovacs.Clone();
+            Kovacs2.Room.Number = 112;
+            Console.WriteLine(Kovacs.ToString());
+            Console.WriteLine(Kovacs2.ToString());
+            Console.ReadKey();
         }
     }
 }

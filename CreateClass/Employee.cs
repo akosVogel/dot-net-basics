@@ -2,19 +2,30 @@
 
 namespace CreateClass
 {
-    class Employee : Person
+    class Employee : Person, ICloneable
     {
         public int Salary { get; set; }
         public string Profession { get; set; }
-        public readonly Room MyRoom = new Room(42);
+        public Room Room { get; set; }
 
         public Employee(string name, DateTime birthDate) : base(name, birthDate)
         {
         }
 
+        public Employee(string name, DateTime birthDate, int salary, string profession) : base(name, birthDate)
+        {
+            Salary = salary;
+            Profession = profession;
+        }
+
         public override string ToString()
         {
-            return base.ToString() + $"\nProfession: {Profession}, Salary: {Salary}$";
+            return base.ToString() + $"\nProfession: {Profession}, Salary: {Salary}$\nRoom: {Room.Number}";
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
